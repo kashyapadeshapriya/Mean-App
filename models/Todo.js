@@ -6,7 +6,7 @@ var TodoSchema = new mongoose.Schema({
   
 		name: String,
  
- 		age : number, 
+ 		age : Number, 
  		note: String
 
 
