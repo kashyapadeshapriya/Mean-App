@@ -1,0 +1,58 @@
+   <!-- Template  custom code that i will be making -->
+<div>
+  Search: <input type="text" ng-model="search.name">
+  <h1>This is my List</h1>
+  <ul>
+    <li ng-repeat="todo in todos | filter: search">
+   
+      <a href="#/{{$index}}">{{todo.name + "  ---  " + todo.note}}</a>
+    </li>
+  </ul>
+  
+  <table style="width:50%">
+  <tr ng-repeat='todo in todos '>
+    <td>{{ todo.name}}</td>
+    <td>{{todo.note}}</td> 
+    <td>50</td>
+  </tr>
+  
+</table>
+
+  
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input  value="I am not editable" id="disabled" type="text" class="validate">
+          <label for="disabled">Disabled</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div> 
+  
+    
+    

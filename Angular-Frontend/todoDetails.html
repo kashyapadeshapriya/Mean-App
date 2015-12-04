@@ -1,0 +1,12 @@
+<script>
+  angular.module('app', ['ngRoute'])
+
+    //---------------
+    // Services
+    //---------------
+
+  .factory('Todos', ['$http', function($http){
+      return $http.get('/todos');
+    }])
+   }]);
+</script>

@@ -1,18 +1,23 @@
- <html ng-app="app">
+<!DOCTYPE html> 
+<html ng-app="app">
 <head>
   <title>ngTodoApp</title>
 </head>
 <body>
-
-<ng-view></ng-view>
+<p> This is the index.html<p>
+    <div ng-view> </div>
 
 <!-- Libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+    <!-- Compiled and minified CSS -->
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 
 
 
 
+    
+ 
 
 <!-- Template -->
 <script type="text/ng-template" id="/todos.html">
@@ -23,6 +28,8 @@
       <a href="#/{{$index}}">{{todo.name}}</a>
     </li>
   </ul>
+  
+
 </script>
 
 
@@ -34,6 +41,16 @@
   completed: <input type="checkbox" ng-model="todo.completed">
   note: <textarea>{{ todo.note }}</textarea>
 </script>
+    
+
+    
+    
+    
+
+    
+    
+
+    
 
 
 
@@ -51,6 +68,23 @@
       return $http.get('/todos');
     }])
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     //---------------
     // Controllers
     //---------------
@@ -67,7 +101,24 @@
     .controller('TodoDetailCtrl', ['$scope', '$routeParams', 'Todos', function ($scope, $routeParams, Todos) {
       $scope.todo = Todos[$routeParams.id];
     }])
-
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     //---------------
     // Routes
     //---------------
@@ -82,7 +133,10 @@
         .when('/:id', {
           templateUrl: '/todoDetails.html',
           controller: 'TodoDetailCtrl'
-       });
+       })
+      
+
+     
     }]);
 </script>
 
